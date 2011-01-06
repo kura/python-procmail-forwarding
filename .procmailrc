@@ -1,0 +1,10 @@
+:0 Wc: mail.lock
+* !Subject.*SPAM.*
+* !From:.*lists.ubuntu.com*
+* !To:.*lists.ubuntu.com*
+* !From:.*tangent*
+{
+    :0
+    | forward.py
+}
+
