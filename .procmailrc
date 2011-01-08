@@ -2,6 +2,8 @@
 * !Subject.*SPAM.*
 * !From:.*lists.ubuntu.com*
 * !To:.*lists.ubuntu.com*
+* !From:.*lists.debian.com*
+* !To:.*lists.debian.com*
 * !From:.*tangent*
 {
     :0
