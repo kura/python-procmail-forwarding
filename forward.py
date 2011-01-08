@@ -5,8 +5,8 @@ import smtplib
 
 content = sys.stdin.read()
 
-from_regex = re.compile(r"[^a-z0-9\-\:]+From:(\s)?(?P<from>.*)")
-subject_regex = re.compile(r"[^a-z0-9\-\:]+Subject:(\s)?(?P<subject>.*)")
+from_regex = re.compile(r"[^a-z0-9\-\:\|\s]+From:(\s)?(?P<from>.*)")
+subject_regex = re.compile(r"[^a-z0-9\-\:\|\s]+Subject:(\s)?(?P<subject>.*)")
 
 to_addr = <<<ADDRESS_HERE>>>
 from_addr = from_regex.search(content).group('from')
