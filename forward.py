@@ -1,7 +1,24 @@
 #!/usr/bin/env python
+
+"""Script for getting emails from procmail and forwarding their
+from and subject to another address
+
+Used for bouncing mails to a PUSH server without sending the whole
+email.
+"""
+
 import sys
 import re
 import smtplib
+
+__author__ = "Kura"
+__copyright__ = "None"
+__credits__ = ["Kura"]
+__license__ = "Free"
+__version__ = "0.1 Beta"
+__maintainer__ = "Kura"
+__email__ = "kura@deviling.net"
+__status__ = "Beta/Test"
 
 content = sys.stdin.read()
 
