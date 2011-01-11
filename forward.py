@@ -22,10 +22,10 @@ __status__ = "Beta/Test"
 
 content = sys.stdin.read()
 
-from_regex = re.compile(r"[^a-z0-9\-\:\|\s]+From:(\s)?(?P<from>.*)")
-subject_regex = re.compile(r"[^a-z0-9\-\:\|\s]+Subject:(\s)?(?P<subject>.*)")
+from_regex = re.compile(r"[^.]From:(\s)?(?P<from>.*)")
+subject_regex = re.compile(r"[^.]Subject:(\s)?(?P<subject>.*)")
 
-to_addr = <<<ADDRESS_HERE>>>
+to_addr = "kura@dopushmail.com"
 from_addr = from_regex.search(content).group('from')
 subject = subject_regex.search(content).group('subject')
 
@@ -37,3 +37,4 @@ Subject: %s
 smtp = smtplib.SMTP("localhost")
 smtp.sendmail(from_addr, to_addr, message)
 smtp.quit()
+#
