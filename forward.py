@@ -25,7 +25,7 @@ content = sys.stdin.read()
 from_regex = re.compile(r"[^.]From:(\s)?(?P<from>.*)")
 subject_regex = re.compile(r"[^.]Subject:(\s)?(?P<subject>.*)")
 
-to_addr = "kura@dopushmail.com"
+to_addr = "XXX@YYY.ZZZ"
 from_addr = from_regex.search(content).group('from')
 subject = subject_regex.search(content).group('subject')
 
